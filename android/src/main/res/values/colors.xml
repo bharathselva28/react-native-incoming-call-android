@@ -1,3 +1,4 @@
 <resources>
-    <color name="background">#141C2E</color>
+    <!--    <color name="background">#313e49</color>-->
+    <color name="background">#61366e</color>
 </resources>

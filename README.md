@@ -1,4 +1,4 @@
-# RN Incoming Call Version 2
+# Incoming Call Version 1.0
 
 > React Native module to display custom incoming call activity, best result when using with firebase background messaging. Only for Android since iOS we have VoIP.
 
@@ -6,35 +6,11 @@ Yes I heard you could use **self managed ConnectionService** thing. But since I'
 
 You could also wait for [this feature request](https://github.com/react-native-webrtc/react-native-callkeep/issues/43) from `react-native-callkeep` to be resolved and have an easier life.
 
-<img width="400" src="https://github.com/bkdev98/react-native-incoming-call/raw/master/incoming-call.jpg">
-
-## Version 2 Breaking Changes
-
-Hello there! It's been a while since I first public version 1 of this library, which contains some bugs that I don't have much time to fix.
-
-Luckily I got a client project which needs this feature again and now I have time to improve it and make sure all major features work. So here is most of it I guess:
-
-- [x] More generic incoming call UI.
-
-- [x] Work nicely with all application state (foreground, background, killed, locked).
-
-- [x] More flexible APIs.
-
-*Thanks to [jpudysz](https://github.com/jpudysz/react-native-callkeep)'s folk of react-native-callkeep, version 2 is heavily depended on it.*
-
-### Migrate from v1
-
-- `getLaunchParameters()` & `clearLaunchParameters()` is now replaced by `openAppFromHeadlessMode()` & `getExtrasFromHeadlessMode()`.
-
-- Answer calls from background / killed state no longer open app and send launchParams, you need to listen to `answerCall` event from headless job and trigger `backToForeground` or `openAppFromHeadlessMode` manually.
+<img width="400" src="https://cbe.themaestro.in/Bharath/incoming-call.jpg">
 
 ## Getting started
 
-`$ npm install react-native-incoming-call --save`
-
-or
-
-`$ yarn add react-native-incoming-call`
+`$ npm install react-native-incoming-call-android --save`
 
 ### Addition installation step
 
@@ -48,7 +24,7 @@ In `AndroidManifest.xml`:
 
 For RN >= 0.60, it's done. Otherwise:
 
-`$ react-native link react-native-incoming-call`
+`$ react-native link react-native-incoming-call-android`
 
 ## Usage
 
@@ -123,19 +99,3 @@ messaging().setBackgroundMessageHandler(async remoteMessage => {
   });
 });
 ```
-
-## Well-known issues
-
-### Incoming screen not show on android > 9:
-
-You need to turn on autostart and display pop-up windows permissions manually. I'm searching for a better solution.
-
-### No vibration when screen locked:
-
-PR is welcomed! 😂
-
-## License
-
-This project is licensed under the MIT License.
-
-[khanh@quocs.com](mailto:khanh@quocs.com)
