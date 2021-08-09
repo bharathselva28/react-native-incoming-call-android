@@ -1,7 +1,7 @@
 {
   "name": "react-native-incoming-call-android",
   "title": "React Native Incoming Call Android",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native module to display incoming call activity. Only for Android since iOS we have VoIP.",
   "main": "index.js",
   "scripts": {
