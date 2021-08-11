@@ -1,4 +1,4 @@
-# Incoming Call Version 1.0
+# Incoming Call Version 1.0.3
 
 > React Native module to display custom incoming call activity, best result when using with firebase background messaging. Only for Android since iOS we have VoIP.
 
@@ -33,7 +33,7 @@ In `App.js`:
 ```javascript
 import {useEffect} from 'react';
 import {DeviceEventEmitter, Platform} from 'react-native';
-import IncomingCall from 'react-native-incoming-call';
+import IncomingCall from 'react-native-incoming-call-android';
 
 // Listen to cancel and answer call events
 useEffect(() => {
@@ -65,7 +65,7 @@ In `index.js` or anywhere firebase background handler lies:
 ```javascript
 import messaging from '@react-native-firebase/messaging';
 import {DeviceEventEmitter} from 'react-native';
-import IncomingCall from 'react-native-incoming-call';
+import IncomingCall from 'react-native-incoming-call-android';
 
 messaging().setBackgroundMessageHandler(async remoteMessage => {
   // Receive remote message
